@@ -16,7 +16,9 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ServiceProvider {
 
@@ -106,6 +108,16 @@ public class ServiceProvider {
                     reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
                 } catch (java.io.UnsupportedEncodingException e) {
                     reader = new BufferedReader(new InputStreamReader(is));
+                }
+
+                int a;
+                Map b = new HashMap<String, String>();
+                if (b.size() == 0) {
+                    throw new Exception("");
+                }
+
+                for (Map.Entry<String, String> entry : b.entrySet()) {
+                    entry.getKey();
                 }
                 String serviceName = reader.readLine();
                 while (serviceName != null && !"".equals(serviceName)) {
